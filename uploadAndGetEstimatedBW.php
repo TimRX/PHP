@@ -62,8 +62,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 function getBW(&$stmt) {
 	$BW = 0;
 	$BWArray = array();
-	// 7天內(含今天的資料)
-	for ($i = 0; $i < 7; $i++) {
+	// 4天內(含今天的資料)
+	for ($i = 0; $i < 4; $i++) {
 		$BWtmp = getBWForOneDay($stmt, $i);
 		if ($BWtmp > 0) { $BWArray[ ] =$BWtmp; }
 	}
